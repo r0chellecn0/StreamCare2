@@ -1,0 +1,11 @@
+<body>
+  welcome
+  <p *ngFor="let value of values">
+    {{value.id}}, {{value.name}}
+  </p>
+  <app-nav-menu></app-nav-menu>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <app-value></app-value>
+</body>

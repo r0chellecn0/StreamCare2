@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ValueComponent } from './value/value.component';
 
+import { AuthService } from './_serviced/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { ValueComponent } from './value/value.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [
+   AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

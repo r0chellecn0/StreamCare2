@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_serviced/auth.service';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -16,6 +16,7 @@ export class NavMenuComponent implements OnInit {
   }
 
   login() {
+    console.log('Login function started');
     this.authService.login(this.model).subscribe(next => {
       console.log('Logged in successfully');
     }, error => {

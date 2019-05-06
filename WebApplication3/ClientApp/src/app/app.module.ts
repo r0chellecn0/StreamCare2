@@ -11,7 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ValueComponent } from './value/value.component';
 
-import { AuthService } from './_serviced/auth.service';
+import { AuthService } from './_services/auth.service';
 
 @NgModule({
   declarations: [

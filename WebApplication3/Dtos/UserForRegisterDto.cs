@@ -14,5 +14,13 @@ namespace WebApplication3.Dtos
         [Required(ErrorMessage ="Password is required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "Role is required")]
+        public string Role { get; set; }
+
+        [Display(Name = "Email address")]
+        [Required(ErrorMessage = "The email address is required")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public string Email { get; set; }
     }
 }

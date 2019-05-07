@@ -22,6 +22,7 @@ namespace StreamCare.Controllers
         }
 
         // GET api/values
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult GetValues()
         {

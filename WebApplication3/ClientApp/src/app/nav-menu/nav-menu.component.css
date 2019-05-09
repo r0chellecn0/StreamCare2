@@ -1,3 +1,14 @@
+.bg-dark {
+  background-color: gold !important;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: transparent;
+  border-color: lightgoldenrodyellow;
+}
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -7,6 +18,7 @@ a.navbar-brand {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

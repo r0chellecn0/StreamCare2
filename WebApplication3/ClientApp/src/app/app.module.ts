@@ -11,6 +11,11 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './_services/auth.service';
+import { MemberListsComponent } from './member-lists/member-lists.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { GuardComponent } from './_guards/guard.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +24,10 @@ import { AuthService } from './_services/auth.service';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    RegisterComponent
+    RegisterComponent,
+    MemberListsComponent,
+    ListsComponent,
+    MessagesComponent
 
   ],
   imports: [
@@ -27,13 +35,25 @@ import { AuthService } from './_services/auth.service';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: '', component: HomeComponent },
+      {
+        path: '',
+        runGuardsAndResolvers: 'always',
+        canActivate: [GuardComponent],
+        children: [
+          {path: 'members', component: MemberListsComponent },
+          { path: 'messages', component: MessagesComponent },
+          { path: 'lists', component: ListsComponent },
+        ]
+      },
+      { path: '**', redirectTo: '', pathMatch: 'full' },
+
+
     ])
   ],
   providers: [
-   AuthService
+    AuthService,
+    GuardComponent
   ],
   bootstrap: [AppComponent]
 })

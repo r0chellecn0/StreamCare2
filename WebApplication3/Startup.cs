@@ -32,7 +32,12 @@ namespace WebApplication3
             services.AddDbContext<DataContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("AzureConnection"),
                 providerOptions => providerOptions.EnableRetryOnFailure()));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(opt =>
+                {
+                    opt.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
             services.AddCors();
             services.AddTransient<Seed>();
             // In production, the Angular files will be served from this directory
@@ -42,6 +47,7 @@ namespace WebApplication3
             });
 
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IStreamRepository, StreamRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {

@@ -29,6 +29,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190509214038_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20190509214038_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20190511055642_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20190511055642_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20190511060018_Oops.cs" />
+    <Compile Remove="Migrations\20190511060018_Oops.Designer.cs" />
+    <Compile Remove="Migrations\20190511060446_ExtendedUserClass2.cs" />
+    <Compile Remove="Migrations\20190511060446_ExtendedUserClass2.Designer.cs" />
+    <Compile Remove="Migrations\20190511060914_Testig.cs" />
+    <Compile Remove="Migrations\20190511060914_Testig.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="ClientApp\src\app\_services\error.interceptor.ts" />
   </ItemGroup>
 

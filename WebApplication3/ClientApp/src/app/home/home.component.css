@@ -1,1 +1,12 @@
-﻿
+h1 {
+  color: gold;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: gold;
+  border-color: gold;
+}
+.btn-info {
+  background-color: maroon;
+}

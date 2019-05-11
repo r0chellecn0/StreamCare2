@@ -1,3 +1,13 @@
+.btn-success {
+  color: #fff;
+  background-color: gold !important;
+  border-color: gold !important;
+}
+
+.text-primary {
+  color: gold !important;
+}
+
 @media (max-width: 767px) {
   /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
   .body-content {

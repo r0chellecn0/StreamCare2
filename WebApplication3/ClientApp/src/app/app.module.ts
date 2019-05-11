@@ -14,7 +14,7 @@ import { AuthService } from './_services/auth.service';
 import { MemberListsComponent } from './member-lists/member-lists.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
-import { GuardComponent } from './_guards/guard.component';
+//import { GuardComponent } from './_guards/guard.component';
 
 
 @NgModule({
@@ -36,16 +36,19 @@ import { GuardComponent } from './_guards/guard.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      {
-        path: '',
-        runGuardsAndResolvers: 'always',
-        canActivate: [GuardComponent],
-        children: [
-          {path: 'members', component: MemberListsComponent },
-          { path: 'messages', component: MessagesComponent },
-          { path: 'lists', component: ListsComponent },
-        ]
-      },
+      //{
+      //  path: '',
+      //  runGuardsAndResolvers: 'always',
+      //  canActivate: [GuardComponent],
+      //  children: [
+      //    {path: 'members', component: MemberListsComponent },
+      //    { path: 'messages', component: MessagesComponent },
+      //    { path: 'lists', component: ListsComponent },
+      //  ]
+      //},
+      { path: 'members', component: MemberListsComponent },
+      { path: 'messages', component: MessagesComponent },
+      { path: 'lists', component: ListsComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' },
 
 
@@ -53,7 +56,7 @@ import { GuardComponent } from './_guards/guard.component';
   ],
   providers: [
     AuthService,
-    GuardComponent
+   // GuardComponent
   ],
   bootstrap: [AppComponent]
 })

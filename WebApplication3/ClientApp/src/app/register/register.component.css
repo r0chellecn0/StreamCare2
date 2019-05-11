@@ -1,1 +1,9 @@
-﻿
+.btn-success {
+  color: #fff;
+  background-color: gold !important;
+  border-color: gold !important;
+}
+
+.text-primary {
+  color: gold !important;
+}

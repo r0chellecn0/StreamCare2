@@ -14,41 +14,59 @@ This way, if you're like my husband who is getting deployed or parents who are o
 
 <h1> Requirement Traceability Matrix </h1>
 
-|ID |Requirements | Being Met? | Unit Test Passed? |
-|--------|:----------|:----------:|:----------:|
-|<b>1</b>|Create Account | X | N/A|
-|1.1|Unique Username | X | N/A|
-|1.2|Confirm Password | X | N/A|
-|1.2.1|Hidden Password|  | N/A|
-|1.2.3|Password Strength Security| X | N/A|
-|1.3|Upload User Account Photo |  | N/A|
-|<b>2</b>|Login |  | N/A|
-|2.1|See homepage on login |  | N/A|
-|<b>3</b>|Logout |  | N/A|
-|<b>4</b>|Messaging |  | N/A|
-|4.1|Send Messages to Others |  | N/A|
-|4.2|Template for daily instructions |  | N/A|
-|<b>5</b>|Photos|  | N/A|
-|5.1|Post Photos on Wall|  | N/A|
-|<b>6</b>| Status Updates | | N/A|
-|6.1| Update Status of Individual Receiving Care | | N/A|
-|<b>7</b>| Care Instructions| | N/A|
-|7.1| Add care instructions to homepage| | N/A|
-|7.2| CRUD operations for care instructions| | N/A|
+|ID |Requirements | Being Met? | Test Passed? |Test Method|
+|--------|:----------|:----------:|:----------:|---|
+|<b>A</b>|Use of API | | N/A||
+|1A|API to create account |X  | X|Postman|
+|2A|API to login |X  | N/A||
+|2A.1|API get token |X  | X|Postman|
+|3A|API to send messages |X  | N/A||
+|4A| API to post photos ||||
+|<b>1</b>|Create Account | X | N/A||
+|1.1|Unique Username |X  | X|Postman|
+|1.2|Confirm Password |  | N/A||
+|1.2.1|Hidden Password| X | N/A||
+|1.2.2|Hashed password saved to database| X | X|Postman|
+|1.2.3|Password Strength Security|  | N/A||
+|1.3|Upload User Account Photo |  | N/A||
+|<b>2</b>|Login |  | N/A||
+|2.1|See homepage on login | X | N/A||
+|<b>3</b>|Logout |X  | N/A||
+|<b>4</b>|Messaging |  | N/A||
+|4.1|Send Messages to Others |  | N/A||
+|4.2|Template for daily instructions |  | N/A||
+|<b>5</b>|Photos|  | N/A||
+|5.1|Post Photos on Wall|  | N/A||
+|<b>6</b>| Status Updates | | N/A||
+|6.1| Update Status of Individual Receiving Care | | N/A||
+|<b>7</b>| Care Instructions| | N/A||
+|7.1| Add care instructions to homepage| | N/A||
+|7.2| CRUD operations for care instructions| | N/A||
+|<b>8</b>| Functionality| | N/A||
+|8.1| Register button brings user to registration page|X | N/A||
+|8.2| Random page Identifiers will bring user to homepage|X | N/A||
+|8.3| Login button will change color once username and password are input|X | N/A||
+|8.4| User can tab through clickable or fillable items on page|X | N/A||
+|8.5| Navbar will render correct page|X | N/A||
+
 
 <h1> Testing </h1>
 
-|Req ID|Requirement Description|Test Method| Test Procedure|Unit Test Passed?|Time Stamp|
+|Req ID|Requirement Description|Test Method| Test Procedure|Unit Test Passed?|Time Stamp| 
 | -------- |------------------| -----| --------|------|-----|
 |1|Account Creation|User has ability to create account|Unit Test |Not Tested||
+|1A|Account Creation|User has ability to create account|Postman |X|12MAY2019|
 |1.1|Unique Username|Ensure each username is unique|Unit Test |Not Tested||
+|1.1A|Unique Username|Ensure each username is unique|Postman |X|12MAY2019|
 |1.2|Confirm Password|User will have ability to confirm password before setting it|Unit Test |Not Tested||
 |1.2.1|Hidden Password|User will not be able to see password when typing it in|Unit Test |Not Tested||
+|1.2.1A|Hidden Password|User will not be able to see password when typing it in|Postman |X|12MAY2019|
 |1.2.3|Password Strength Security | User will create a strong password|Unit Test |Not Tested||
 |1.3| Upload User Account Photo | User will have ability to upload account photo|Unit Test |Not Tested||
 |1.4| Delete Account | User will have ability to delete account |Unit Test |Not Tested||
 |1.4.1| Delete Account Confirmation | User will confirm they want to delete their account |Unit Test |Not Tested||
 |2| Login| User will have ability to login|Unit Test |Not Tested||
+|2A| Login| User will have ability to login|Postman |X|12MAY2019|
 |2.1| See homepage on login | User will be able to see their account homepage on login|Unit Test |Not Tested||
 |3| Logout| User will be able to logout of account|Unit Test |Not Tested||
 |4| Messaging | User will be able to communicate with other users|Unit Test |Not Tested||
@@ -78,7 +96,7 @@ This way, if you're like my husband who is getting deployed or parents who are o
 |10.2.1| Change photo | User's account photo will be changed after uploading photo change |Unit Test |Not Tested||
 |10.2.2| Delete | Users photo or stream message will be deleted after delete button is clicked |Unit Test |Not Tested||
  
-
+*known bug : some functionality not working due to AuthService component
 <h1> Prioritized Backlog Items </h1>
 
 
@@ -98,15 +116,15 @@ This way, if you're like my husband who is getting deployed or parents who are o
 <h1>Technologies Currently Implementing</h1>
 <ul>
   <li> Azure SQLDatabase</li>
+  <li> Azure VM </li>
+  <li> Deployed to Azure </li>
 </ul>
 <br>
 <h1>Technologies to be Implemented</h1>
 <ul>
-<strike> Azure Database </strike>
-<li> SignalR </li>
+
 <li> Azure Key Vault </li>
 <li> Azure BLOB Storage </li>
-<li> Deployed to Azure</li>
 </ul>
 
 <h1> Screenshots </h1>

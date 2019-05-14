@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using WebApplication3.Helpers;
+using AutoMapper;
 
 namespace WebApplication3
 {
@@ -39,6 +40,7 @@ namespace WebApplication3
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
             services.AddCors();
+            services.AddAutoMapper();
             services.AddTransient<Seed>();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

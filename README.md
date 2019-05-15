@@ -1,6 +1,7 @@
 <h1> Stream Care </h1>
 
 <b>Streamlining communication</b> between caregivers and family members of loved ones receiving care.
+<p> <a href="https://streamcare.azurewebsites.net/"> StreamCare in Progress</a> </p>
 
 I'm currently in an accelerated Cloud Application Development Course sponsored by Microsoft and creating this application as a project. I came up with the idea of being able to just "click" and be able to update a status report when I was dropping my son off at daycare. 
 Every morning, I had to fill in the same paperwork and he came home with a report of his day.

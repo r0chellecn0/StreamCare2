@@ -11,9 +11,11 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './_services/auth.service';
-import { MemberListsComponent } from './member-lists/member-lists.component';
+import { MemberListsComponent } from './members/member-lists/member-lists.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
+import { UserService } from './_services/user.service';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 //import { GuardComponent } from './_guards/guard.component';
 
 
@@ -27,7 +29,8 @@ import { MessagesComponent } from './messages/messages.component';
     RegisterComponent,
     MemberListsComponent,
     ListsComponent,
-    MessagesComponent
+    MessagesComponent,
+    MemberCardComponent
 
   ],
   imports: [
@@ -56,6 +59,7 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   providers: [
     AuthService,
+    UserService,
    // GuardComponent
   ],
   bootstrap: [AppComponent]

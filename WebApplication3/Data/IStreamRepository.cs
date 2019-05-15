@@ -13,5 +13,10 @@ namespace WebApplication3.Data
         Task<bool> SaveAll();
         Task<IEnumerable<User>> GetUsers();
         Task<User> GetUser(int id);
+        Task<Message> GetMessage(int id);
+        //Task<PagedList<Message>> GetMessagesForUser();
+        Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId);
+
+
     }
 }

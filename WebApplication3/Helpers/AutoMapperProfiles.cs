@@ -22,6 +22,7 @@ namespace WebApplication3.Helpers
                 });
 
             CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<MessageForCreation, Message>();
         }
 
     }

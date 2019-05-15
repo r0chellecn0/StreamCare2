@@ -17,5 +17,7 @@ namespace WebApplication3.Models
         public DateTime LastActive { get; set; }
         public ICollection<Photo> Photos { get; set; }
         public string Introduction { get; set; }
+        public ICollection<Message> MessagesSent { get; set; }
+        public ICollection<Message> MessagesReceived { get; set; }
     }
 }
